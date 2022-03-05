@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+body{
+  font-family: arial;
+  background: #B360D0
+}
+html{
+  font-size:62.5%;
+}
+.row{
+  max-width: 114rem;
+  margin: auto;
+}
+.appointment-box{
+  width: 50rem;
+  height: 50rem;
+  background: #C4DC5D;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: .5rem .3rem .5rem #000;
+  border-radius: .5rem;
+}
+.appointment-box h2{
+  text-align: center;
+  font-size: 2.5rem;
+  color: green;
+  margin-top: 1rem;
+}
+.appointment-box h2::after{
+  content: "";
+  width: 30rem;
+  height: .1rem;
+  background: #fff;
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.appointment-box .f-group1{
+  float: left;
+  margin-right: 2rem;
+  margin-left: 1rem
+}
+.appointment-box label{
+  font-size: 2rem;
+  display: block;
+  color: #0A0EEE;
+}
+.appointment-box .doctors-select select{
+  width: 23rem;
+  padding: .5rem 1rem;
+  color: green;
+  font-size: 1.7rem;
+  border: .1rem solid #000;
+  border-radius: .5rem;
+}
+.pt-area{
+  margin-top: 3rem
+}
+.pt-area .pt-nam-num .pt-name{
+  float: left;
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+.pt-area .pt-nam-num input{
+  width: 23rem;
+  font-size: 1.8rem;
+  padding: .5rem 1rem;
+  border: .1rem solid #000;
+  border-radius: .5rem;
+  text-transform: capitalize
+}
+.pt-age-gen{
+  margin-top: 3rem;
+  
+ 
+}
+.pt-age-gen .pt-age{
+  float: left;
+  margin-left: 16rem;
+  margin-right: 2rem
+}
+.pt-age-gen .pt-age label,.gender label{
+  font-size: 1.8rem;
+}
+.pt-age-gen .pt-age input,.gender select{
+  width: 8rem;
+  padding: 1rem .3rem;
+  border: .1rem solid #000;
+  border-radius: .3rem;
+  font-size: 1.5rem;
+  font-weight: 600
+}
+
+.appointment-box .submit-button{
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.appointment-box .submit-button .s-btn{
+  font-size: 1.8rem;
+  padding: .7rem 8rem;
+  background: cyan;
+  border: .1rem solid #000;
+  border-radius: 5rem;
+  transition: .5s;
+}
+.appointment-box .submit-button .s-btn:hover{
+  color: #fff;
+  background: green;
+  cursor: pointer;
+}
+
+
+
+/* media Quray */
+
+@media only screen and (max-width: 480px)
+  
+  
+  
+  
+  

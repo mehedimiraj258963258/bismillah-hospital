@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Online Doctors Appointment</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.png" />
+	
+	<!-- Google Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+<body>
+	<section id="doctors-appointment">
+		<div class="row"> 
+			<div class="appointment-box">
+				<h2>Online Doctors Appointment</h2>
+				<div class="doctors-select">
+					<form action="https://formspree.io/f/xknkqldj" method="POST">
+						<div class="f-group1"> 
+							<label for="">Specialist:</label>
+							<div class="specialist-slct"> 
+								<select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+									<option value="">-- Choose Specialist --</option>
+									<option value="heart" >Heart/Cardiology</option>
+									<option value="orthopedic">Orthopedic</option>
+									<option value="gyne">Gyneclogy</option>
+									<option value="skin">Skin & Sex</option>
+									<option value="child">Child</option>
+									<option value="ent">ENT</option>
+									<option value="diabetes">Diabetes</option>
+									<option value="medichin">Medichin</option>
+								</select>
+							</div>
+
+						</div>
+						
+						<div class="f-group2"> 
+							<label for="">Doctors:</label>
+							<div class="doctor-slct">
+								<select name="slct2" id="slct2"> </select>
+							</div>
+						</div>
+					</div>
+					<div class="pt-area">
+						<div class="pt-nam-num">
+							<div class="pt-name"> 
+								<label for="pateint-nm">Pataint Name*</label>
+								<input type="text" name="Pateint:" id="pateint-nm" required />
+							</div>
+							<div class="phn-nmbr"> 
+								<label for="phn-nmbr">Phone Number*</label>
+								<input type="text" id ="phn-nmbr" name="Phone Number" placeholder="01xxxxxxxxx" required />
+							</div>
+						</div>
+						<div class="pt-age-gen">
+							<div class="pt-age"> 
+								<label for="age">Age:</label>
+								<input type="number" id="age" required />
+							</div>
+							<div class="gender"> 
+								<label for="gender">Gender:</label>
+								<select name="Gender:" id="gender">
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="submit-button"> 
+						<input type="submit" value="Submit" class="s-btn" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<script> 
+		function populate(s1,s2)
+		{
+			var s1= document.getElementById(s1);
+			var s2= document.getElementById(s2);
+			
+			s2.innerHTML ="";
+			
+			if(s1.value == "heart")
+			{
+				var optionArray = ['sahan-islam|Dr.Md. Sahan Islam',];
+			}
+			else if(s1.value == 'orthopedic')
+			{
+				var optionArray = ['mahmudur-rahman|Dr.Md. Mahmudur Rahamna','sah-nur-liton|Dr.Md. Sah-Nur Liton','saiful-islam|Dr.Md. Saiful Islam'];
+			} 
+			else if(s1.value == 'gyne')
+			{
+				var optionArray = ['nusrat-sadia|Dr. Nurat Sadia Tania','nazme-zakia|Dr. Nazme Zakia','mastura-siddique|Dr. Mastura Siddique','forida-yasmin|Dr. Forida Yasmin'];
+			}
+			else if(s1.value == 'skin')
+			{
+				var optionArray = ['arif-chawdhury|Dr.Md. Arif Chawdhury'];
+			}
+			else if(s1.value == 'child')
+			{
+				var optionArray = ['ariful-islam|Dr.Md. Ariful Islam','saiful-islam|Dr.Md. Saiful Islam']
+			}
+			else if(s1.value == 'ent')
+			{
+				var optionArray = ['johirul-islam|Dr.Md. Johirul Islam']
+			}
+			else if(s1.value == 'diabetes')
+			{
+				var optionArray = ['abdul-kader|Dr.Md. Abdul Kader','nazme-zakia|Dr.Nazme Zakia']
+			}
+			else if(s1.value == 'medichin')
+			{
+				var optionArray = ['sahan-islam|Dr.Md. Sahan Islam','Mahmudur-rahman|Dr.Md. Mahmudur Rahman','ariful-islam|Dr.Md. Ariful Islam','shanur-liton|Dr.Md. Sah-Nur Liton','saiful-islam|Dr.Md. Saiful Islam']
+			}
+			
+			for(var option in optionArray)
+			{
+				var pair = optionArray[option].split("|");
+				var newoption = document.createElement("option");
+				
+				newoption.value = pair[0];
+				newoption.innerHTML=pair[1];
+				s2.options.add(newoption);
+			}
+		}
+	</script> 
+</body>
+</html>
